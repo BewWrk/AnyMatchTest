@@ -37,10 +37,10 @@ export class GameScene extends Phaser.Scene {
         let ClearRowSound = this.sound.add('clearRowSound', {volume: 0.6});
         let OpenSound = this.sound.add('openSound', {volume: 0.3});
         let CloseSound = this.sound.add('closeSound', {volume: 0.3});
-        let bgm1Sound = this.sound.add('lobbyBgm', {volume: 0.2});
-        let bgm2Sound = this.sound.add('lobbyBgm2', {volume: 0.2});
-        let bgm3Sound = this.sound.add('lobbyBgm3', {volume: 0.1});
-        let bgm4Sound = this.sound.add('lobbyBgm4', {volume: 0.3});
+        let bgm1Sound = this.sound.add('lobbyBgm', {volume: 0.5});
+        let bgm2Sound = this.sound.add('lobbyBgm2', {volume: 0.5});
+        let bgm3Sound = this.sound.add('lobbyBgm3', {volume: 0.3});
+        let bgm4Sound = this.sound.add('lobbyBgm4', {volume: 0.7});
         bgm1Sound.loop = true;
         bgm2Sound.loop = true;
         bgm3Sound.loop = true;
@@ -101,11 +101,16 @@ export class GameScene extends Phaser.Scene {
         var popupContainer = this.add.container(22, 227);
         var menuSprite= this.add.sprite(22,693, 'menuButton').setOrigin(0,0).setInteractive();
         var closeSprite= this.add.sprite(317,13, 'closeButton').setOrigin(0,0).setInteractive();
-        var toggleBgm1 = this.add.sprite(80,120, 'toggle').setOrigin(0,0).setInteractive();
-        var toggleBgm2 = this.add.sprite(80,180, 'toggle').setOrigin(0,0).setInteractive();
+        var toggleBgm1 = this.add.sprite(50,120, 'toggle').setOrigin(0,0).setInteractive();
+        var toggleBgm2 = this.add.sprite(50,180, 'toggle').setOrigin(0,0).setInteractive();
         var toggleBgm3 = this.add.sprite(200,120, 'toggle').setOrigin(0,0).setInteractive();
         var toggleBgm4 = this.add.sprite(200,180, 'toggle').setOrigin(0,0).setInteractive();
         toggleBgm1.setTint(0xff0000);
+        var style = { font: "16px Arial", fill: "#BA332A" };  
+        var label_score1 = this.add.text(90,130, "Balloon Trip", style);
+        var label_score2 = this.add.text(90,190, "Candy Parade", style);
+        var label_score3 = this.add.text(240,130, "073534923", style);
+        var label_score4 = this.add.text(240,190, "123983801", style);
         popup = this.add.sprite(0,0, 'popup').setOrigin(0,0);
         popupContainer.add(popup);
         popupContainer.add(closeSprite);
@@ -113,6 +118,10 @@ export class GameScene extends Phaser.Scene {
         popupContainer.add(toggleBgm2);
         popupContainer.add(toggleBgm3);
         popupContainer.add(toggleBgm4);
+        popupContainer.add(label_score1);
+        popupContainer.add(label_score2);
+        popupContainer.add(label_score3);
+        popupContainer.add(label_score4);
         popupContainer.setScale(0);
 
         menuSprite.on('pointerdown', function (pointer) {
