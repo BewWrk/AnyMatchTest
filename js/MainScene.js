@@ -8,6 +8,7 @@ export default class MainScene extends Phaser.Scene {
         console.log("preload");
         this.load.image("background", "assets/images/Bg.png");
         this.load.image("buttonStart", "assets/images/ButtonSquareGreen.png");
+        this.load.image("buttonStart4X", "assets/images/ButtonPrim.png");
         this.load.image("buttonNewGame", "assets/images/ButtonSec.png");
         this.load.audio('lobbyBgm', 'assets/sound/game-bgm.mp3');
         this.load.audio('lobbyBgm2', 'assets/sound/lobby-bgm.mp3');
@@ -24,8 +25,9 @@ export default class MainScene extends Phaser.Scene {
         //lobbySound.loop = true;
         //lobbySound.play();
 
+        var spriteStart4x = this.add.sprite(67,347, 'buttonStart').setOrigin(0,0).setInteractive();
         var spriteStart = this.add.sprite(67,447, 'buttonStart').setOrigin(0,0).setInteractive();
-        var spriteNewGame = this.add.sprite(67,587, 'buttonNewGame').setOrigin(0,0).setInteractive().setScale(0.5);
+        var spriteNewGame = this.add.sprite(67,547, 'buttonNewGame').setOrigin(0,0).setInteractive().setScale(0.5);
 
         spriteStart.on('pointerdown', function (pointer) {
             this.setTint(0xff0000);
