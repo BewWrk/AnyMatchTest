@@ -78,7 +78,7 @@ export class GameScene extends Phaser.Scene {
             });
         });
 
-        var spriteBack= this.add.sprite(18,12, 'backButton').setOrigin(0,0).setInteractive();
+        var spriteBack= this.add.sprite(18,12, 'backButton').setOrigin(0,0).setInteractive().setScale(0.25);
 
         spriteBack.on('pointerdown', function (pointer) {
             this.setTint(0xff0000);
