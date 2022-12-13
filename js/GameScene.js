@@ -29,7 +29,7 @@ export class GameScene extends Phaser.Scene {
 
     create() {
         this.background = this.add.image(0,0,"backgroundGame");
-        this.background.setOrigin(0,0).setScale(0.25);
+        this.background.setOrigin(0,0);
         let ButtonSound = this.sound.add('buttonSound', {volume: 0.5});
         ButtonSound.loop = false;
         let MatchedSound = this.sound.add('matchedSound', {volume: 0.7});
@@ -78,7 +78,7 @@ export class GameScene extends Phaser.Scene {
             });
         });
 
-        var spriteBack= this.add.sprite(18,12, 'backButton').setOrigin(0,0).setInteractive().setScale(0.25);
+        var spriteBack= this.add.sprite(18,12, 'backButton').setOrigin(0,0).setInteractive();
 
         spriteBack.on('pointerdown', function (pointer) {
             this.setTint(0xff0000);
