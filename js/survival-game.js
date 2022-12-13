@@ -4,7 +4,7 @@ import GrayScalePipeline from './pipeline/GrayscalePipeline.js';
 
 const config = {
     width:414,
-    height:756,
+    height:759,
     backgroundColor: '#333333',
     type: Phaser.AUTO,
     parent: 'survival-game',
@@ -20,7 +20,10 @@ const config = {
         gravity:{y:0},
       }
     },
-    pipeline: { 'Gray': GrayScalePipeline }
+    pipeline: { 'Gray': GrayScalePipeline },
+    dom: {
+      createContainer: true
+    }
   }
 
   new Phaser.Game(config);
