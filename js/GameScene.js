@@ -29,7 +29,7 @@ export class GameScene extends Phaser.Scene {
 
     create() {
         this.background = this.add.image(0,0,"backgroundGame");
-        this.background.setOrigin(0,0);
+        this.background.setOrigin(0,0).setScale(0.25);
         let ButtonSound = this.sound.add('buttonSound', {volume: 0.5});
         ButtonSound.loop = false;
         let MatchedSound = this.sound.add('matchedSound', {volume: 0.7});
@@ -48,8 +48,6 @@ export class GameScene extends Phaser.Scene {
         bgm1Sound.play();
 
         var container = this.add.container(9, 130);
-        var containerItem = this.add.dom(5, 126, 'div', 'background-color: #FFFFFA; width: 402px; height: 534px; border: 1px solid rgba(225, 160, 16, 0.59);border-radius: 5.83445px;box-shadow: 0px 1.94482px 1.94482px rgba(123, 99, 16, 0.13);').setOrigin(0,0);
-        //this.add.dom().setElement(containerItem, 'background-color: lime; width: 220px; height: 100px;');
         rowNum = 3;
         for (var row = 0; row < rowNum; row++) {
             for (var col = 0; col < 9; col++) {
