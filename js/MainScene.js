@@ -25,7 +25,7 @@ export default class MainScene extends Phaser.Scene {
         //lobbySound.loop = true;
         //lobbySound.play();
 
-        var spriteStart4x = this.add.sprite(67,347, 'buttonStart').setOrigin(0,0).setInteractive();
+        var spriteStart4x = this.add.sprite(67,347, 'buttonStart4X').setOrigin(0,0).setInteractive().setScale(0.25);
         var spriteStart = this.add.sprite(67,447, 'buttonStart').setOrigin(0,0).setInteractive();
         var spriteNewGame = this.add.sprite(67,547, 'buttonNewGame').setOrigin(0,0).setInteractive().setScale(0.5);
 
