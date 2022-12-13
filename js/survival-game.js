@@ -3,8 +3,8 @@ import MainScene from "./MainScene.js";
 import GrayScalePipeline from './pipeline/GrayscalePipeline.js';
 
 const config = {
-    width:828,
-    height:1518,
+    width:1656,
+    height:3036,
     backgroundColor: '#333333',
     type: Phaser.AUTO,
     parent: 'survival-game',
