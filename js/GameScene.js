@@ -17,7 +17,7 @@ export class GameScene extends Phaser.Scene {
         this.load.image("popup", "assets/images/popup.png");
         this.load.image("backButton", "assets/images/BackButton.png");
         this.load.image("closeButton", "assets/images/CloseButton.png");
-        this.load.spritesheet('spriteItems', 'assets/images/Items.png', { frameWidth: 44, frameHeight: 44 });
+        this.load.spritesheet('spriteItems', 'assets/images/Items.png', { frameWidth: 176, frameHeight: 176 });
         this.load.audio('buttonSound', 'assets/sound/Click.mp3');
         this.load.audio('matchedSound', 'assets/sound/CorrectMatch.mp3');
         this.load.audio('wrongMatchedSound', 'assets/sound/WrongMatch.mp3');
@@ -52,7 +52,7 @@ export class GameScene extends Phaser.Scene {
         for (var row = 0; row < rowNum; row++) {
             for (var col = 0; col < 9; col++) {
                 var randomNum = Math.floor(Math.random() * 9);
-                var sprite = this.add.sprite(9 + (col * 44), 130 + (row * 44), 'spriteItems', randomNum).setOrigin(0,0).setInteractive();
+                var sprite = this.add.sprite(36 + (col * 176), 520 + (row * 167), 'spriteItems', randomNum).setOrigin(0,0).setInteractive();
                 var Item = new Object();
                 Item.sprite = sprite;
                 Item.number = randomNum + 1;
@@ -99,7 +99,7 @@ export class GameScene extends Phaser.Scene {
         });
 
         var popupContainer = this.add.container(22, 227);
-        var menuSprite= this.add.sprite(22,693, 'menuButton').setOrigin(0,0).setInteractive();
+        var menuSprite= this.add.sprite(88,2772, 'menuButton').setOrigin(0,0).setInteractive();
         var closeSprite= this.add.sprite(317,13, 'closeButton').setOrigin(0,0).setInteractive();
         var toggleBgm1 = this.add.sprite(50,120, 'toggle').setOrigin(0,0).setInteractive();
         var toggleBgm2 = this.add.sprite(50,180, 'toggle').setOrigin(0,0).setInteractive();
