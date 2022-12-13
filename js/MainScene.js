@@ -23,7 +23,7 @@ export default class MainScene extends Phaser.Scene {
         //lobbySound.loop = true;
         //lobbySound.play();
 
-        var spriteStart = this.add.sprite(268,1574, 'buttonStart').setOrigin(0,0).setInteractive();
+        var spriteStart = this.add.sprite(134,787, 'buttonStart').setOrigin(0,0).setInteractive();
 
         spriteStart.on('pointerdown', function (pointer) {
             this.setTint(0xff0000);
